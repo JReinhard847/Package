@@ -1,19 +1,20 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Library {
-    private Book[] books;
+    private ArrayList<Book> books;
 
-    public Book[] getBooks() {
+    public ArrayList<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(Book[] books) {
+    public void setBooks(ArrayList<Book> books) {
         this.books = books;
     }
 
-    public Library(Book[] books) {
+    public Library(ArrayList<Book> books) {
         this.books = books;
     }
 
@@ -25,5 +26,13 @@ public class Library {
         }
         return "Library with books: \n" + booksList;
 
+    }
+
+    public void addBook(Book b) {
+        books.add(b);
+    }
+
+    public void removeBook(Book b){
+        books.remove(b);
     }
 }
