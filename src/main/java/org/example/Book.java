@@ -15,9 +15,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return title+" by "+author+" , isbn:"+isbn;
+        return title + " by " + author + ", ISBN: " + isbn;
     }
-
     public void setAuthor(String author) {
         this.author = author;
     }
