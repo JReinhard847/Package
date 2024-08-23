@@ -28,21 +28,19 @@ public class Library {
     }
 
     public void addBook(Book b) {
-        if(books.add(b)){
-            System.out.println("Added " + b.toString() + " to library.");
-        }
-        else {
-            System.out.println("Failed to add " + b.toString() + " to library.");
+        if (books.add(b)) {
+            System.out.println("Added " + b.toString());
+        } else {
+            System.out.println("Failed to add " + b.toString());
         }
     }
 
-    public void removeBook(Book b){
-        if(books.remove(b)){
-            System.out.println("Removed " + b.toString() + " to library.");
-        }
-        else {
-            System.out.println("Failed to remove " + b.toString() + " to library.");
-        }
+    public void removeBook(Book b) {
 
+        if(books.remove(b)){
+            System.out.println("Removed "+b.toString());
+        }else{
+            System.out.println(b.toString()+" was not found in the library.");
+        }
     }
 }
