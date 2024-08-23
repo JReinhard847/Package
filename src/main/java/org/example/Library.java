@@ -28,10 +28,21 @@ public class Library {
     }
 
     public void addBook(Book b) {
-        books.add(b);
+        if(books.add(b)){
+            System.out.println("Added " + b.toString() + " to library.");
+        }
+        else {
+            System.out.println("Failed to add " + b.toString() + " to library.");
+        }
     }
 
     public void removeBook(Book b){
-        books.remove(b);
+        if(books.remove(b)){
+            System.out.println("Removed " + b.toString() + " to library.");
+        }
+        else {
+            System.out.println("Failed to remove " + b.toString() + " to library.");
+        }
+
     }
 }
